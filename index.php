@@ -14,7 +14,7 @@
      </head>
 
 	<body>
-    <H1>Test de connection a la base</H1>
+    <H1>Test de connection a la base De Donnés </H1>
     <?php 
 	include('include/Connect_Base.php');
 	$nuart=4800017;
