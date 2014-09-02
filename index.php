@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR">
   <head>
     <meta charset="utf-8">
 
@@ -25,8 +25,21 @@
 		$req=$DB->query($sql);
 		while($d=$req->fetch(PDO::FETCH_OBJ))
 		{
-			echo $d->Titre;	
+			echo $d->Titre.'<br/>';	
 		}
+		try
+		{
+			$sql="SELECT argu FROM base_catalis_argu WHERE NUART='$nuart'";
+			$req=$DB->query($sql);
+			while($d=$req->fetch(PDO::FETCH_OBJ))
+			{
+				echo $d->argu;	
+			}	
+		}
+		catch(PDOException $e)
+		{
+			echo '<p style="color:red;font-weight:bold;">La requete n\'est pas valide</p>';	
+		}	
 	}
 	//Si celle-ci est invalide on affiche le message suivant
 	catch(PDOException $e)
