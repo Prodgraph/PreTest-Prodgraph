@@ -38,13 +38,13 @@
 		}
 		catch(PDOException $e)
 		{
-			echo '<p style="color:red;font-weight:bold;">La requete n\'est pas valide</p>';	
+			echo '<p style="color:red;font-weight:bold;">La requete pour l\'argument n\'est pas valide</p>';	
 		}	
 	}
 	//Si celle-ci est invalide on affiche le message suivant
 	catch(PDOException $e)
 	{
-		echo '<p style="color:red;font-weight:bold;">La requete n\'est pas valide</p>';	
+		echo '<p style="color:red;font-weight:bold;">La requete pour le tritre n\'est pas valide</p>';	
 	}	
 	?>
     
